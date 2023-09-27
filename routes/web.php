@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('massages/{massage}', function ($slug) {
 
-    $massages = file_get_contents(__DIR__ . "/../resources/massages/{$slug}.html");
+    $massages = file_get_contents(__DIR__ . "/../resources/massages{$slug}.html");
 
     return view('massages', [
         'massages' => $massages,
